@@ -1,0 +1,22 @@
+.loginContainer{
+    margin: auto;
+    width: 50%;
+}
+
+ .login-background{
+    background-image: url('http://themalaysianedge.com/wp-content/uploads/2015/10/online_shopping.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color: red;*/
+  }
+
+  .pnl-container{
+      margin-top: 300px; 
+  }
+
+  .login-fullscreen{
+    position:absolute;
+    margin: auto;
+    width: 100%;
+    height:100%;
+  }

@@ -1,0 +1,16 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let product of products">
+      <div class="card card-height img-rounded">
+          <div>
+            <img class="" [src]="product.imageUrl" [title]="product.productCategory"
+            [style.width]='imageWidth' [style.height]='imageHeight' [style.margin]='imageMargin'>
+          </div>
+          <div class="card-action">
+            <button class="btn btn-primary" (click)='categorySelected()' >{{product.productCategory}}</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

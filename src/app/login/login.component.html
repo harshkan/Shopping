@@ -1,0 +1,27 @@
+<div class="login-background login-fullscreen">
+        <div class="container pnl-container">
+            <div class="loginContainer panel panel-primary resize">
+                <div class="panel-heading">
+                    <span>User Login</span>
+                </div>
+                <div class="panel-body">
+                    <form name="loginForm" (submit)="UserValidation($event)">
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                            <input class="form-control" type="text" name="txtUId" ng-model="txtUId"  placeholder="Enter UserId" ng-required/>
+                        </div><br>
+                        <div class="input-group">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input class="form-control" type="password" name="txtUPass" ng-model="txtUPass"   placeholder="Enter Password" ng-required/>
+                        </div>
+                        <div>
+                            <br/>
+                            <input  class='form-control btn {{btnclass}}' type="submit" name="submit" value="Login"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
+ 

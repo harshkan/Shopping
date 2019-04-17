@@ -1,0 +1,19 @@
+ .ml-auto .dropdown-menu {
+      left: auto !important;
+      right: 0px;
+    }
+.button-mr{
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+}
+
+.mr-left{
+    margin-left: 100px;
+}
+.mr-right{
+    margin-right: 30px;
+}
+.clr-white{
+    color: white;
+}

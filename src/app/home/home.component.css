@@ -1,0 +1,26 @@
+
+ .Fullscreen
+  {
+    height: 100%;
+    background-color: yellowgreen;
+  }
+  .home-div2{
+     background-color: rosybrown;
+    width: 100%;
+    height: 100%;
+  }
+
+ .div-add{
+   padding: 10px;
+   background: white;
+ }
+  .div-add-hor{
+   padding: 10px;
+   background:yellow;
+   height: 100%;
+   margin: auto;
+ }
+
+.div-add-main{
+  margin: 10px;
+}

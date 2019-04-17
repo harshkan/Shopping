@@ -1,0 +1,19 @@
+/*.product-main-div{
+    background-color: red;
+    margin: 20px;
+}
+
+.product-item-div{
+    background-color:yellow;
+}
+
+.category-div{
+    background-color: greenyellow;
+}*/
+
+
+
+.card-height:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+

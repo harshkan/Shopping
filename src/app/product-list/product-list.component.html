@@ -1,0 +1,40 @@
+<div class="container  product-main-div">
+     <div class="col-md-3 category-div">
+            <h3>Select Category</h3>
+            <div class="list-group">
+                <button class="list-group-item" (click)="setSelectedCatogery('Electronics')">Electronics</button>
+                <button class="list-group-item" (click)="setSelectedCatogery('Grocery')">Grocery</button>
+                <button class="list-group-item" (click)="setSelectedCatogery('Fashion')">Fashion</button>
+                <button class="list-group-item" (click)="setSelectedCatogery('Sports')">Sports</button>
+            </div>
+    </div>
+    <div class="col-md-9 product-item-div">
+        <div>
+            <div class="row">
+                <span *ngFor="let product of products">
+                    
+                 
+
+                    <div class="card img-thumbnail card-height" style="width:250px; height:300px; margin:10px;" *ngIf="product.productCategory === selectedCategory">
+                         <img class="card-img-top" [src]="product.productImg" alt="prod image" style="width:72%; height:60%; margin: auto;">
+                        <div class="card-body" style="width:100%; height:40%">
+                            <h4 class="card-title">{{product.productName}}</h4>
+                            <div style=" position:absolute; bottom:0;left:10; margin-bottom:10px">
+                                <button *ngIf="! ProductExistInCart(product)" class="btn btn-primary" (click)="addToCart(product)"> <span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
+                                <button *ngIf="ProductExistInCart(product)" class="btn btn-danger" (click)="removeProductFromCart(product)"> <span class="glyphicon glyphicon-trash"></span>Delete from Cart</button>
+                                <span style="padding-left:1em"><b>{{product.productPrice | currency:'INR':true}}</b></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

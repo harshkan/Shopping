@@ -1,0 +1,44 @@
+<div class="container">
+    <div  class='panel panel-primary cart-mr-top'>
+        <div class='panel-heading'>
+        YOUR CART
+        </div>
+        <div class='panel-body'>
+            <div class='table-responsive'>
+                <div *ngIf='cartEmpty' class="alert alert-danger text-center cart-mr-top">
+                    <h1>Opppss !!! your cart is empty</h1>
+                    <img class="cart-img" src="../assets/cart-red.png" alt="cart-red image">
+                </div>
+                <table *ngIf='! cartEmpty'class='table'>
+                    <thead>
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Id</th>
+                            <th>Product Name</th>
+                            <th>Product Category</th>
+                            <th>Product Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let product of cartProducts'>
+                            <td><img [src]='product.productImg' [title]="product.productName" [style.width.px]='imageWidth' [style.margin.px]='imageMargin'></td>
+                            <td>{{product.productId}}</td>
+                            <td>{{product.productName | lowercase}}</td>
+                            <td>{{product.productCategory}}</td>
+                            <td>{{product.productPrice | currency:'INR':true:'1.2-2'}}</td>
+                            <td> <button class="btn btn-danger" (click)="removeProductFromCart(product)"> <span class="glyphicon glyphicon-trash"></span>Delete from Cart</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div>
+                <span><strong>Your total bill Amount is :{{userTotalBill}}</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-success" (click)="payBill()">Pay Bill</button>
+            </div>
+        </div>
+    </div>
+</div>
+
